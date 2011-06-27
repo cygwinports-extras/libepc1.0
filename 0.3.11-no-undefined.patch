@@ -1,0 +1,15 @@
+--- origsrc/libepc-0.3.11/Makefile.am	2010-03-23 06:07:57.000000000 -0500
++++ src/libepc-0.3.11/Makefile.am	2011-06-21 11:54:31.043676700 -0500
+@@ -135,10 +135,10 @@ AM_CFLAGS = \
+ 	-DGETTEXT_PACKAGE=\"@GETTEXT_PACKAGE@\"
+ 
+ libepc_libepc_1_0_la_CFLAGS			= $(AM_CFLAGS) $(LIBEPC_CFLAGS) -DG_LOG_DOMAIN=\"libepc\"
+-libepc_libepc_1_0_la_LDFLAGS			= $(LIBEPC_LIBS) -version-info $(LT_VERSION_INFO)
++libepc_libepc_1_0_la_LDFLAGS			= $(LIBEPC_LIBS) -version-info $(LT_VERSION_INFO) -no-undefined
+ 
+ libepc_ui_libepc_ui_1_0_la_CFLAGS		= $(AM_CFLAGS) $(LIBEPC_UI_CFLAGS) -DG_LOG_DOMAIN=\"libepc-ui\"
+-libepc_ui_libepc_ui_1_0_la_LDFLAGS		= $(LIBEPC_UI_LIBS) -version-info $(LT_VERSION_INFO)
++libepc_ui_libepc_ui_1_0_la_LDFLAGS		= $(LIBEPC_UI_LIBS) -version-info $(LT_VERSION_INFO) -no-undefined
+ libepc_ui_libepc_ui_1_0_la_LIBADD		= libepc/libepc-1.0.la
+ 
+ examples_list_resources_CFLAGS			= $(AM_CFLAGS) $(LIBEPC_CFLAGS)
