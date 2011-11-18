@@ -2,10 +2,9 @@ ORIG_PN="libepc"
 inherit gnome2
 
 
-PATCH_URI="0.3.11-no-undefined.patch
-           0.3.11-as-needed.patch"
+PATCH_URI="0.3.11-no-undefined.patch"
 
-PKG_NAMES="${PN}_2 ${PN}-common ${PN}-devel"
-libepc1_0_2_CONTENTS="usr/bin/*-1.0-2.dll"
+PKG_NAMES="${PN}_3 ${PN}-common ${PN}-devel"
+libepc1_0_3_CONTENTS="usr/bin/*-1.0-3.dll"
 libepc1_0_common_CONTENTS="usr/share/doc/ usr/share/locale/"
 libepc1_0_devel_CONTENTS="usr/include/ usr/lib/ usr/share/gtk-doc/"

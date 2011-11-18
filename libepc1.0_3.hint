@@ -1,5 +1,5 @@
 category: Gnome
-requires: libepc1.0-common libavahi-client3 libavahi-common3 libavahi-glib1 libglib2.0_0 libgnutls26 libgtk2.0_0 libintl8 libsoup2.4_1 libuuid1
+requires: libepc1.0-common libavahi-client3 libavahi-common3 libavahi-glib1 libglib2.0_0 libgnutls26 libgtk3_0 libintl8 libsoup2.4_1 libuuid1
 external-source: libepc1.0
 sdesc: "Easy Publish and Consume library (runtime)"
 ldesc: "The Easy Publish and Consume library provides an easy method to 
