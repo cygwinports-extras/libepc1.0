@@ -1,7 +1,7 @@
 category: Gnome
-requires: libepc1.0-common libavahi-client3 libavahi-common3 libavahi-glib1 libglib2.0_0 libgnutls26 libintl8 libsoup2.4_1 libuuid1
+requires: libepc-ui1.0_3 libepc1.0-devel libglib2.0-devel libgtk3-devel
 external-source: libepc1.0
-sdesc: "Easy Publish and Consume library (runtime)"
+sdesc: "Easy Publish and Consume GUI library (development)"
 ldesc: "The Easy Publish and Consume library provides an easy method to 
 publish data per HTTPS, announce that information via DNS-SD, find that 
 information, and finally consume it.  You can use this library as 

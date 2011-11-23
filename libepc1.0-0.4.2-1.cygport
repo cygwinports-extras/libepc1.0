@@ -5,7 +5,13 @@ inherit gnome2
 PATCH_URI="0.3.11-no-undefined.patch
 	   0.4.2-vpath.patch"
 
-PKG_NAMES="${PN}_3 ${PN}-common ${PN}-devel"
-libepc1_0_3_CONTENTS="usr/bin/*-1.0-3.dll"
+# separate core and ui libraries because glom-1.18, which uses only core,
+# is gtk2 app, but ui lib (used by totem) uses gtk3
+PKG_NAMES="libepc1.0_3 libepc1.0-common libepc1.0-devel libepc-ui1.0_3 libepc-ui1.0-devel"
+libepc1_0_3_CONTENTS="usr/bin/cygepc-1.0-3.dll"
 libepc1_0_common_CONTENTS="usr/share/doc/ usr/share/locale/"
-libepc1_0_devel_CONTENTS="usr/include/ usr/lib/ usr/share/gtk-doc/"
+libepc1_0_devel_CONTENTS="usr/include/libepc-1.0/ usr/lib/libepc-1.0.*
+                          usr/lib/pkgconfig/libepc-1.0.pc usr/share/gtk-doc/"
+libepc_ui1_0_3_CONTENTS="usr/bin/cygepc-ui-1.0-3.dll"
+libepc_ui1_0_devel_CONTENTS="usr/include/libepc-ui-1.0/ usr/lib/libepc-ui-1.0.*
+                             usr/lib/pkgconfig/libepc-ui-1.0.pc"
