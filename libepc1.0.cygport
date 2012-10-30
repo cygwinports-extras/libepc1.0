@@ -1,6 +1,16 @@
 ORIG_PN="libepc"
 inherit gnome2
 
+NAME="libepc1.0"
+VERSION=0.4.4
+RELEASE=1
+CATEGORY="Gnome"
+SUMMARY="Easy Publish and Consume library"
+DESCRIPTION="The Easy Publish and Consume library provides an easy method to
+publish data per HTTPS, announce that information via DNS-SD, find that
+information, and finally consume it.  You can use this library as key/value
+store published to the network, using encryption, authentication and service
+discovery."
 
 PATCH_URI="0.3.11-no-undefined.patch
 	   0.4.2-vpath.patch"
@@ -8,6 +18,7 @@ PATCH_URI="0.3.11-no-undefined.patch
 # separate core and ui libraries because glom-1.18, which uses only core,
 # is gtk2 app, but ui lib (used by totem) uses gtk3
 PKG_NAMES="libepc1.0_3 libepc1.0-common libepc1.0-devel libepc-ui1.0_3 libepc-ui1.0-devel"
+libepc1_0_3_REQUIRES="libepc1.0-common"
 libepc1_0_3_CONTENTS="usr/bin/cygepc-1.0-3.dll"
 libepc1_0_common_CONTENTS="usr/share/doc/ usr/share/locale/"
 libepc1_0_devel_CONTENTS="usr/include/libepc-1.0/ usr/lib/libepc-1.0.*
@@ -15,3 +26,5 @@ libepc1_0_devel_CONTENTS="usr/include/libepc-1.0/ usr/lib/libepc-1.0.*
 libepc_ui1_0_3_CONTENTS="usr/bin/cygepc-ui-1.0-3.dll"
 libepc_ui1_0_devel_CONTENTS="usr/include/libepc-ui-1.0/ usr/lib/libepc-ui-1.0.*
                              usr/lib/pkgconfig/libepc-ui-1.0.pc"
+
+KEEP_LA_FILES="none"
