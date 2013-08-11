@@ -4,7 +4,7 @@ inherit gnome2
 NAME="libepc1.0"
 VERSION=0.4.4
 RELEASE=1
-CATEGORY="Gnome"
+CATEGORY="Libs"
 SUMMARY="Easy Publish and Consume library"
 DESCRIPTION="The Easy Publish and Consume library provides an easy method to
 publish data per HTTPS, announce that information via DNS-SD, find that
@@ -12,8 +12,11 @@ information, and finally consume it.  You can use this library as key/value
 store published to the network, using encryption, authentication and service
 discovery."
 
-PATCH_URI="0.3.11-no-undefined.patch
-	   0.4.2-vpath.patch"
+PATCH_URI="
+	0.3.11-no-undefined.patch
+	0.4.2-vpath.patch
+	0.4.4-cygwin.patch
+"
 
 # separate core and ui libraries because glom-1.18, which uses only core,
 # is gtk2 app, but ui lib (used by totem) uses gtk3

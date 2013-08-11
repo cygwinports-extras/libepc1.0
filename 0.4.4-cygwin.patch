@@ -1,0 +1,10 @@
+--- origsrc/libepc-0.4.4/tests/framework.c	2011-05-12 14:11:43.000000000 -0500
++++ src/libepc-0.4.4/tests/framework.c	2013-08-11 00:53:15.212044300 -0500
+@@ -26,6 +26,7 @@
+ 
+ #include <net/if.h>
+ #include <sys/ioctl.h>
++#include <sys/socket.h>
+ 
+ #include <errno.h>
+ #include <unistd.h>
